@@ -388,6 +388,31 @@ footer { background: var(--cream); }
   .check-list li { grid-template-columns: 1fr; gap: 2px; }
 }
 
+
+/* ===== 타입 스케일 통일 + 줄바꿈 (2026-11-19) ===== */
+h1, h2, h3, .module-title strong { text-wrap: balance; }
+p, li, small, .check-list span { text-wrap: pretty; }
+.nw, .check-list .nw { white-space: nowrap; text-wrap: nowrap; }
+.check-list .line { display: block; }
+/* 카드 제목 — 모두 20px */
+.prep-card h3, #preparation .prep-card h3, .place-grid h3, .resource-card h3, .day-head h3, .module-title strong { font-size: 20px; }
+.place-grid h3 span { font-size: 15px; }
+/* 카드 본문 — 모두 15px */
+.prep-card p, .schedule-card > p:not(.big-time), .venue-card > p, .resource-card p, .module-body li, .check-list li, .journey-intro p, .section-heading > p, .contact-line { font-size: 15px; }
+/* 카드 안 강조 한 줄 — 16px */
+#preparation .prep-key, .check-title { font-size: 16px; }
+/* 보조·하단 한 줄 — 14px */
+#preparation .prep-foot, .resource-bottom, .small-note, .timeline-label, .day-hours, .venue-card > .copy-status, .login-hint, .module-title small, .lunch-break { font-size: 14px; }
+/* 작은 라벨·배지·태그·칩 — 모두 13px */
+.eyebrow, .mini-label, .resource-type, .module-time, .tag, .day-badge, .duration, .os-chips span, .practice { font-size: 13px; }
+/* 카드 번호 — 22px */
+.card-number, #preparation .card-number { font-size: 22px; }
+@media (max-width: 1000px) { .prep-card p br { display: none; } }
+@media (max-width: 760px) {
+  .prep-card h3, #preparation .prep-card h3, .place-grid h3, .resource-card h3, .day-head h3, .module-title strong { font-size: 18px; }
+  .prep-card p br, .section-heading > p br { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
