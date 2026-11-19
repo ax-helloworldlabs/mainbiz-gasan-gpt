@@ -359,6 +359,33 @@ footer { background: var(--cream); }
   .mobile-bar b { font-size: 13px; }
 }
 
+
+/* 준비물 카드 v2 — 짧고 같은 높이 */
+#preparation .prep-card { display: flex; flex-direction: column; min-height: 0; padding: 26px 24px 22px; }
+#preparation .prep-top { display: flex; justify-content: space-between; align-items: center; }
+#preparation .card-number { position: static; font-size: 22px; }
+#preparation .prep-card h3 { margin: 16px 0 6px; }
+#preparation .prep-key { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+#preparation .id-required .prep-key { color: var(--warn-dark); }
+#preparation .self-prepare .prep-key { color: #7c2d12; }
+#preparation .prep-foot { margin-top: auto; padding-top: 14px; font-size: 14px; font-weight: 600; color: var(--muted); }
+#preparation .id-required .prep-foot { color: #a1281f; }
+#preparation .self-prepare .prep-foot { color: #9a3412; }
+.os-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.os-chips span { background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; padding: 4px 10px; border-radius: 999px; line-height: 1.5; }
+.check-box { margin-top: 18px; padding: 22px 26px; background: #fff; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 88px; }
+.check-title { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+.check-title span { display: inline-flex; width: 22px; height: 22px; align-items: center; justify-content: center; border-radius: 50%; background: var(--navy); color: #fff; font-size: 13px; margin-right: 6px; }
+.check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: chk; }
+.check-list li { display: grid; grid-template-columns: 150px 1fr; gap: 12px; font-size: 15px; color: var(--muted); padding-top: 8px; border-top: 1px dashed var(--line); counter-increment: chk; }
+.check-list li b { color: var(--ink); }
+.check-list li b::before { content: counter(chk) ". "; color: var(--accent); }
+@media (max-width: 760px) {
+  #preparation .prep-card { padding: 22px 20px 18px; }
+  .check-box { padding: 18px; margin-bottom: 56px; }
+  .check-list li { grid-template-columns: 1fr; gap: 2px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
