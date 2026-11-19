@@ -402,7 +402,7 @@ p, li, small, .check-list span { text-wrap: pretty; }
 /* 카드 안 강조 한 줄 — 16px */
 #preparation .prep-key, .check-title { font-size: 16px; }
 /* 보조·하단 한 줄 — 14px */
-#preparation .prep-foot, .resource-bottom, .small-note, .timeline-label, .day-hours, .venue-card > .copy-status, .login-hint, .module-title small, .lunch-break { font-size: 14px; }
+#preparation .prep-foot, .resource-bottom, .small-note, .timeline-label, .day-hours, .venue-card > .copy-status, .module-title small, .lunch-break { font-size: 14px; }
 /* 작은 라벨·배지·태그·칩 — 모두 13px */
 .eyebrow, .mini-label, .resource-type, .module-time, .tag, .day-badge, .duration, .os-chips span, .practice { font-size: 13px; }
 /* 카드 번호 — 22px */
@@ -439,3 +439,8 @@ p, li, small, .check-list span { text-wrap: pretty; }
   .plus { display: none; }
 }
 @page { margin: 12mm; }
+
+/* 자료 카드: 실선 위치 고정 정렬 */
+.resource-grid { align-items: stretch; }
+.resource-card > p { flex: 1 0 auto; }
+.resource-card > p br { display: inline; }
